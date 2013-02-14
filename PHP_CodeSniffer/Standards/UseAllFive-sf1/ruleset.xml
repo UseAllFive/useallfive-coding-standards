@@ -12,8 +12,11 @@
     <exclude name="Squiz.Classes.ValidClassName" />
 
     <!-- Ignore indenting by 4 space rule and set it to 2 below -->
+    <!--
     <exclude name="Generic.WhiteSpace.ScopeIndent" />
     <exclude name="PEAR.Functions.FunctionCallSignature" />
+    -->
+    <exclude name="PSR2.ControlStructures.SwitchDeclaration" />
   </rule>
 
   <!-- Set indenting to 2 spaces -->
