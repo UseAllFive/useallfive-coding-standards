@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ruleset name="UseAllFive-sf1">
+<ruleset name="UseAllFiveSf1">
   <description>Use All Five's PSR-2-like coding standard (for use on Symfony 1.x projects).</description>
 
   <rule ref="Generic.CodeAnalysis.VariableAnalysis"/>
