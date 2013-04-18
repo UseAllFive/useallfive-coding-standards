@@ -165,7 +165,7 @@ function pear_install {
 }
 
 function pear_get_dir {
-  DIRS="$HOME/pear /usr/lib/php/pear /usr/share/pear"
+  DIRS="`pear config-get php_dir` $HOME/pear /usr/lib/php/pear /usr/share/pear"
   for dir in $DIRS; do
     if [ -d "$dir" ]; then
       echo $dir
@@ -212,7 +212,7 @@ function php_codesniffer_install {
   fi
   if [ 0 -eq $ret ]; then
     cd PHP_Codesniffer-VariableAnalysis
-    ./install.sh -d "$(pear_get_dir)/share/pear/PHP/CodeSniffer"
+    ./install.sh -d "$(pear_get_dir)/PHP/CodeSniffer"
     if [ 0 -ne $? ]; then
       error "Could not install 'PHP_Codesniffer-VariableAnalysis'. Exiting" $EXIT_PHPCS_ERR
     fi
