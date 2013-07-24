@@ -89,8 +89,8 @@ FILES_ADDED="`git diff --cached --name-only --diff-filter=M`"
 FILES_MODIFIED="`git diff --cached --name-only --diff-filter=A`"
 FILES_DELETED="`git diff --cached --name-only --diff-filter=D`"
 
-check_phpcs
 check_phplint
+check_phpcs
 check_jshint
 
 pre_exit
