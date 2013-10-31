@@ -29,7 +29,7 @@ function check_phpcs {
     fi
 
     echo -e "== Running PHP_CodeSniffer on the following files:\n$PHP_FILES\n"
-    phpcs "$PHP_FILES"
+    phpcs $PHP_FILES
     ret=$?
     echo "phpcs returned: $ret"
     if [ 0 -ne $ret ]; then
@@ -68,7 +68,7 @@ function check_jshint {
     fi
 
     echo -e "== Running js_hint on the following files:\n$JS_FILES\n"
-    jshint "$JS_FILES"
+    jshint $JS_FILES
     if [ 0 -ne $? ]; then
       error "You have JS errors!" $EXIT_JSHINT_ERROR
     fi
