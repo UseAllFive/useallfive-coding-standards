@@ -1,0 +1,10 @@
+require 'rubygems'
+require 'bundler/setup'
+
+load 'deploy' if respond_to?(:namespace) # cap2 differentiator
+Dir['plugins/*/lib/recipes/*.rb'].each { |plugin| load(plugin) }
+
+load 'config/deploy/bower'
+load 'config/deploy/npm'
+load 'config/deploy/grunt'
+load 'config/deploy/general'
